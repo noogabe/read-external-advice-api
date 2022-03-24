@@ -2,45 +2,25 @@
 
 namespace App\Console\Commands;
 
+use App\Advice;
 use Illuminate\Console\Command;
 
 use App\Services\AdviceAPIService;
 
 class ReadExternalApi extends Command
 {
-    /**
-     * The name and signature of the console command.
-     *
-     * @var string
-     */
     protected $signature = 'read:api';
 
-    /**
-     * The console command description.
-     *
-     * @var string
-     */
     protected $description = 'Read advice Api';
 
     protected $adviceAPIService;
 
-
-    /**
-     * Create a new command instance.
-     *
-     * @return void
-     */
     public function __construct(AdviceAPIService $adviceAPIService)
     {
         parent::__construct();
         $this->adviceAPIService = $adviceAPIService;
     }
 
-    /**
-     * Execute the console command.
-     *
-     * @return int
-     */
     public function handle()
     {
 
@@ -54,6 +34,10 @@ class ReadExternalApi extends Command
          var_dump($dailyAdvice);
          //a partir daqui é salvar numa tabela advice esse campo $dailyAdvice
 
-         
+         $advice = new Advice();
+
+         $advice->advice = $dailyAdvice;
+
+         $advice->save();
     }
 }
