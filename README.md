@@ -22,7 +22,7 @@ php artisan key:generate
 
 5. **Start Xampp**
 
-6. **In Mysql, at http://localhost:80/phpmyadmin/ create a database called 'events'**
+6. **In Mysql, at http://localhost:80/phpmyadmin/ create a database called 'advice-api'**
 
 7. **Run the migrations**
 ```bash
