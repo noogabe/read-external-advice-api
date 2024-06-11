@@ -13,19 +13,28 @@
 ```bash
 composer install
 ```
+3. **Generate the application key**
+```bash
+php artisan key:generate
+```
 
-3. **Create a file called .env and copy and paste the contents of env.example**
+4. **Create a file called .env and copy and paste the contents of env.example**
 
-4. **Start Xampp**
+5. **Start Xampp**
 
-5. **In Mysql, at http://localhost:80/phpmyadmin/ create a database called 'events'**
+6. **In Mysql, at http://localhost:80/phpmyadmin/ create a database called 'events'**
 
-6. **Run the migrations**
+7. **Run the migrations**
 ```bash
 php artisan migrate
 ```
 
-7. **Start the server**
+8. **Start the server**
 ```bash
 php artisan serve
 ```
+
+9. **Run this command to get an advice from the api**
+```bash
+php artisan inspire
+```   
